@@ -10,7 +10,7 @@ import Wallet from "./Pages/Wallet";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/crypto-wallet">
       <Provider>
         <Switch>
           <Route path="/" exact>
@@ -19,6 +19,7 @@ function App() {
           <Route path="/wallet">
             <Wallet />
           </Route>
+          <Route path="*">404</Route>
         </Switch>
       </Provider>
     </Router>
