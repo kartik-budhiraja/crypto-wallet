@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/crypto-wallet/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/crypto-wallet/static/js/main.c275c274.chunk.js",
+    "main.js.map": "/crypto-wallet/static/js/main.c275c274.chunk.js.map",
+    "runtime-main.js": "/crypto-wallet/static/js/runtime-main.44d0dbb9.js",
+    "runtime-main.js.map": "/crypto-wallet/static/js/runtime-main.44d0dbb9.js.map",
+    "static/css/2.a95be28f.chunk.css": "/crypto-wallet/static/css/2.a95be28f.chunk.css",
+    "static/js/2.d35ad752.chunk.js": "/crypto-wallet/static/js/2.d35ad752.chunk.js",
+    "static/js/2.d35ad752.chunk.js.map": "/crypto-wallet/static/js/2.d35ad752.chunk.js.map",
+    "static/js/3.78fe9f93.chunk.js": "/crypto-wallet/static/js/3.78fe9f93.chunk.js",
+    "static/js/3.78fe9f93.chunk.js.map": "/crypto-wallet/static/js/3.78fe9f93.chunk.js.map",
+    "index.html": "/crypto-wallet/index.html",
+    "static/css/2.a95be28f.chunk.css.map": "/crypto-wallet/static/css/2.a95be28f.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/crypto-wallet/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.d35ad752.chunk.js.LICENSE.txt": "/crypto-wallet/static/js/2.d35ad752.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44d0dbb9.js",
+    "static/css/2.a95be28f.chunk.css",
+    "static/js/2.d35ad752.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.c275c274.chunk.js"
+  ]
+}
