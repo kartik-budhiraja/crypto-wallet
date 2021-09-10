@@ -24,18 +24,22 @@ export const getCurrrencyIcon = (curr) => {
 
 export const calculateBalance = (transactions) => {
   return (
-    transactions
-      .filter((t) => t.direction === "credit")
-      .reduce((prev, next) => prev + next.amount, 0) -
-    transactions
-      .filter((t) => t.direction === "debit")
-      .reduce((prev, next) => prev + next.amount, 0)
-  );
+    Number(
+      transactions
+        .filter((t) => t.direction === "credit")
+        .reduce((prev, next) => Number(prev) + Number(next.amount), 0)
+    ) -
+    Number(
+      transactions
+        .filter((t) => t.direction === "debit")
+        .reduce((prev, next) => Number(prev) + Number(next.amount), 0)
+    )
+  ).toFixed(2);
 };
 
 export const convertToDollar = (currency, amount, rates) => {
   if (currency === "CAD") {
-    return amount;
+    return Number(amount).toFixed(2);
   }
 
   if (!rates[`${currency}_CAD`]) {
@@ -44,5 +48,5 @@ export const convertToDollar = (currency, amount, rates) => {
 
   const rate = rates[`${currency}_CAD`];
 
-  return amount * rate;
+  return Number(amount * rate).toFixed(2);
 };

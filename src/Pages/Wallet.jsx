@@ -15,9 +15,9 @@ const Wallet = () => {
   const { state } = useContext(Store);
 
   const { balances, transactions } = state;
-  console.log(transactions[currency]);
+
   return (
-    <>
+    <div style={{ padding: "10px" }}>
       <Title>{getCurrrencyName(currency)}</Title>
       <Button type="link" onClick={() => history.goBack()}>
         Go Back
@@ -36,7 +36,7 @@ const Wallet = () => {
           </List.Item>
         )}
       />
-    </>
+    </div>
   );
 };
 

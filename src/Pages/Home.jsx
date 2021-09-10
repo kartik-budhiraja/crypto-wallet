@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { Divider, List, Typography } from "antd";
+import { Divider, List, Spin, Typography } from "antd";
 
 import Avatar from "antd/lib/avatar/avatar";
 import { Store } from "../reducer";
 import { useHistory } from "react-router-dom";
-import { getCurrrencyIcon } from "../utils";
+import { convertToDollar, getCurrrencyIcon } from "../utils";
 
 const { Title } = Typography;
 
@@ -12,10 +12,11 @@ const Home = () => {
   const { state } = useContext(Store);
   const history = useHistory();
 
-  const { loading, total, balances } = state;
+  const { loading, total, balances, rates } = state;
 
   return (
     <>
+      {loading && <Spin />}
       {!loading && (
         <div style={{ padding: "10px" }}>
           <Title type="success" style={{ textAlign: "center" }}>
@@ -33,6 +34,11 @@ const Home = () => {
                 <List.Item.Meta
                   avatar={<Avatar src={getCurrrencyIcon(item)} />}
                   title={item}
+                  description={`$${convertToDollar(
+                    item,
+                    balances[item],
+                    rates
+                  )}`}
                 />
               </List.Item>
             )}

@@ -21,7 +21,7 @@ const reducer = (state, action) => {
         return { ...prev, [next]: calculateBalance(transactions[next]) };
       }, {});
       const total = Object.keys(balances).reduce(
-        (prev, next) => prev + convertToDollar(next, balances[next], rates),
+        (prev, next) => Number(prev) + Number(convertToDollar(next, balances[next], rates)),
         0
       );
       return { ...state, transactions, balances, total, rates, loading: false };
